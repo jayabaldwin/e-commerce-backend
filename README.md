@@ -91,8 +91,6 @@ THEN I am able to successfully create, update, and delete data in my database
 ## Usage
 Run this application with the command:
 
-## Testing
-
 ## License
 
 The application is covered under the following license: [MIT](https://opensource.org/licenses/MIT)
