@@ -24,7 +24,6 @@ In essence, this application provides a robust back end infrastructure for an e-
 
 <br>
 
-
 ### Brief functionality walk through:
 
 ![Walk Through](./assets/functionality-walkthrough.gif)
@@ -37,7 +36,6 @@ In essence, this application provides a robust back end infrastructure for an e-
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Usage](#usage)
-- [Testing](#testing)
 - [License](#license)
 - [Contributing](#contributing)
 - [Questions](#questions)
