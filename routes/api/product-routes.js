@@ -3,8 +3,7 @@ const { Product, Category, Tag, ProductTag } = require("../../models");
 
 // The `/api/products` endpoint
 
-// Get all products
-// include its associated Category and Tag data
+// Get all products and include its associated Category and Tag data
 router.get("/", async (req, res) => {
   try {
     const product = await Product.findAll({
@@ -19,8 +18,7 @@ router.get("/", async (req, res) => {
 
 // Get one product
 router.get("/:id", async (req, res) => {
-  // find a single product by its `id`
-  // be sure to include its associated Category and Tag data
+  // Find a single product by its `id` and include its associated Category and Tag data
   try {
     const product = await Product.findByPk(req.params.id, {
       include: [Category, Tag],
@@ -32,7 +30,6 @@ router.get("/:id", async (req, res) => {
 });
 
 
-// EXPLAIN THIS SECTION
 // Create new product
 router.post("/", (req, res) => {
   /* req.body should look like this...
@@ -53,6 +50,7 @@ router.post("/", (req, res) => {
             tag_id,
           };
         });
+        // [{product_id:4, tag_id:1}]
         return ProductTag.bulkCreate(productTagIdArr);
       }
       // if no product tags, just respond
@@ -66,9 +64,8 @@ router.post("/", (req, res) => {
 });
 
 
-// Update product
 router.put("/:id", (req, res) => {
-  // update product data
+  // Update product data
   Product.update(req.body, {
     where: {
       id: req.params.id,

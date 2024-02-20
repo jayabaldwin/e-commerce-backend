@@ -28,7 +28,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// Does this require a response?
+
 router.post("/", async (req, res) => {
   // Create a new category
   try {
@@ -70,20 +70,5 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json(error.message);
   }
 });
-
-
-
-// router.put("/:id", (req, res) => {
-//   // update a category by its `id` value
-//   Category.update(req.body, { where: { id: req.params.id } })
-//     .then((category) => {
-//       res.json(category);
-//     })
-//     .catch((error) => {
-//       res.status(500).json(error.message);
-//     });
-// });
-
-
 
 module.exports = router;

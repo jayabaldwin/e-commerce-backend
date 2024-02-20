@@ -29,7 +29,6 @@ router.get('/:id', async (req, res) => {
 });
 
 
-// Do I need to return a body for this?
 router.post('/', async (req, res) => {
   // Create a new tag
   try {
