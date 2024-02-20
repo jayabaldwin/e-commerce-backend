@@ -2,10 +2,9 @@ const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
-// SUCCESSFUL TEST
+
 router.get('/', async (req, res) => {
-  // find all tags
-  // be sure to include its associated Product data
+  // Find all tags and include its associated Product data
   try {
     const tag = await Tag.findAll({
       include: [Product],
@@ -16,10 +15,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-// SUCCESSFUL TEST
+
 router.get('/:id', async (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
+  // Find a single tag by its `id` and include its associated Product data
   try {
     const tag = await Tag.findByPk(req.params.id, {
       include: Product,
@@ -30,9 +28,10 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// // SUCCESSFUL TEST
+
+// Do I need to return a body for this?
 router.post('/', async (req, res) => {
-  // create a new tag
+  // Create a new tag
   try {
     const tag = await Tag.create(req.body);
     res.status(201).end();
@@ -43,11 +42,30 @@ router.post('/', async (req, res) => {
 
 
 router.put('/:id', async (req, res) => {
-  // update a tag's name by its `id` value
+  // Update a tag's name by its `id` value
+  try {
+    const tag = await Tag.update(req.body, {
+      where: { id: req.params.id },
+    });
+    res.json(tag);
+  } catch (error) {
+    res.status(500).json(error.message);
+  };
 });
 
+
 router.delete('/:id', async (req, res) => {
-  // delete on tag by its `id` value
+  // Delete on tag by its `id` value
+  try {
+    const tag = await Tag.destroy({
+      where: {
+        id: req.params.id
+      },
+    });
+    res.status(200).json(tag);
+  } catch (error) {
+    res.status(500).json(error.message);
+  }
 });
 
 module.exports = router;

@@ -3,10 +3,8 @@ const { Category, Product } = require("../../models");
 
 // The `/api/categories` endpoint
 
-// SUCCESSFUL TEST
 router.get("/", async (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
+  // Find all categories and include its associated Products
   try {
     const categories = await Category.findAll({
       include: [Product],
@@ -17,10 +15,9 @@ router.get("/", async (req, res) => {
   }
 });
 
-// SUCCESSFUL TEST
+
 router.get("/:id", async (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
+  // Find one category by its `id` value and include its associated Products
   try {
     const categories = await Category.findByPk(req.params.id, {
       include: [Product],
@@ -31,9 +28,9 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// SUCCESSFUL TEST
+// Does this require a response?
 router.post("/", async (req, res) => {
-  // create a new category
+  // Create a new category
   try {
     const categories = await Category.create(req.body);
     res.status(201).end();
@@ -43,7 +40,6 @@ router.post("/", async (req, res) => {
 });
 
 
-// UNTESTED
 router.put("/:id", async (req, res) => {
   // Update a category by its `id` value
   try {
@@ -61,7 +57,6 @@ router.put("/:id", async (req, res) => {
 });
 
 
-// SUCCESSFUL TEST
 router.delete("/:id", async (req, res) => {
   // Delete a category by its `id` value
   try {
