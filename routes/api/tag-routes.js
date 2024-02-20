@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
-
+// SUCCESSFUL TEST
 router.get('/', async (req, res) => {
   // find all tags
   // be sure to include its associated Product data
@@ -16,6 +16,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// SUCCESSFUL TEST
 router.get('/:id', async (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
@@ -29,7 +30,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// NEED HELP
+// // SUCCESSFUL TEST
 router.post('/', async (req, res) => {
   // create a new tag
   try {
@@ -39,6 +40,7 @@ router.post('/', async (req, res) => {
     res.status(500).json(error.message);
   }
 });
+
 
 router.put('/:id', async (req, res) => {
   // update a tag's name by its `id` value
