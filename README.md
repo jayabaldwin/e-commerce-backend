@@ -1,20 +1,34 @@
 <br>
-  <h1 align="center">E-Commerce Backend Application</h1>
+  <h1 align="center">E-Commerce Back End using Object-Relational Mapping (ORM)</h1>
 
 ![Badge](https://img.shields.io/badge/License-MIT-yellow.svg) ![JavaScript](https://img.shields.io/badge/JavaScript-red) ![Node.js](https://img.shields.io/badge/Node.js-blue) ![Express.js@4.18.2](https://img.shields.io/badge/Express.js@4.18.2-lightgreen) ![MySQL2@3.9.1](https://img.shields.io/badge/MySQL2@3.9.1-purple) ![Sequelize@6.37.1](https://img.shields.io/badge/Sequelize@6.37.1-lightblue) ![Dotenv@16.4.4](https://img.shields.io/badge/Dotenv@16.4.4-grey)
 
 ## Description
+In the realm of modern business, e-commerce has become a cornerstone, facilitating seamless transactions between businesses and consumers, especially in the electronics industry. With the burgeoning growth of e-commerce platforms like Shopify and WooCommerce, it's imperative for developers to grasp the foundational architecture of such platforms.
 
-"Internet retail, also known as **e-commerce**, plays a significant role within the electronics industry, as it empowers businesses and consumers alike to conveniently engage in online buying and selling of electronic products. In the latest available data from 2021, the industry in the United States alone was estimated to have generated the substantial amount of US$2.54 trillion, according to the United Nations Conference on Trade and Development. E-commerce platforms like Shopify and WooCommerce provide a suite of services to businesses of all sizes. Due to the prevalence of these platforms, developers should understand the fundamental architecture of e-commerce sites.
+This repository encompasses the task of constructing the back end for an e-commerce website by leveraging the power of Object-Relational Mapping (ORM). The primary objective is to configure a functional Express.js API integrated with Sequelize, a powerful ORM tool, to interact with a MySQL database.
 
-Your task is to build the back end for an e-commerce site by modifying starter code. You’ll configure a working Express.js API to use Sequelize to interact with a MySQL database.
+#### This application, upon setup and execution, facilitates the following functionalities:
 
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality and all of the acceptance criteria being met. You’ll need to submit a link to the video and add it to the readme of your project."
+1. <strong>Connection to Database:</strong> Upon adding database credentials to an environment variable file, the application connects to a MySQL database using Sequelize.
+
+2. <strong>Database Initialization:</strong> When schema and seed commands are executed, a development database is created and populated with test data.
+
+3. <strong>Server Invocation:</strong> After invoking the application, the server starts, and Sequelize models are synchronized with the MySQL database.
+
+4. <strong>API Endpoint Access:</strong> Upon opening API GET routes in tools like Insomnia for categories, products, or tags, the application fetches data from the database and presents it in a formatted JSON format.
+
+5. <strong>CRUD Operations:</strong> Testing API POST, PUT, and DELETE routes in Insomnia enables the successful creation, update, and deletion of data within the database.
+
+In essence, this application provides a robust back end infrastructure for an e-commerce site, allowing seamless interaction with a MySQL database through a well-configured Express.js API.
+
 <br>
+
 
 ### Brief functionality walk through:
 
-[Functionality Walk Through]
+![Walk Through](./assets/functionality-walkthrough.gif)
+
 
 ## Table of Contents
 
@@ -36,13 +50,13 @@ Because this application won’t be deployed, you’ll also need to provide a li
 - Sequelize (version 6.37.1)
 - Dotenv (version 16.4.4)
 
-  ## Installation
+## Installation
 
   `npm init -y`: create a package.json file
   <br>
   `npm install`: install dependencies
 
-  ### Dependencies
+### Dependencies
 
   `npm i mysql2`: database management system
   <br>
@@ -52,7 +66,7 @@ Because this application won’t be deployed, you’ll also need to provide a li
   <br>
   `npm i dotenv`: protection of sensitive information
 
-  ## User Story
+## User Story
 
 ```md
 AS A manager at an internet retail company
