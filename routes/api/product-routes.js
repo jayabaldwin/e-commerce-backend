@@ -30,6 +30,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+// EXPLAIN THIS SECTION
 // create new product
 router.post("/", (req, res) => {
   /* req.body should look like this...
