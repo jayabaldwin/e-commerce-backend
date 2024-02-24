@@ -24,10 +24,13 @@ In essence, this application provides a robust back end infrastructure for an e-
 
 <br>
 
-### Brief functionality walk through:
+### Brief display of endpoint results:
 
-![Walk Through](./assets/functionality-walkthrough.gif)
+![Endpoint Results](./assets/endpoint-results.gif)
 
+View my full application walkthrough, inclusive of initialising the app and endpoint testing below: 
+<br>
+[Ecommerce Backend Application Walk Through](./assets/ecommerce-backend-walkthrough.mp4)
 
 ## Table of Contents
 
@@ -91,8 +94,6 @@ THEN I am able to successfully create, update, and delete data in my database
 ## Usage
 Run this application with the command:
 
-## Testing
-
 ## License
 
 The application is covered under the following license: [MIT](https://opensource.org/licenses/MIT)
@@ -107,3 +108,5 @@ I will not be accepting contributions to this repository at this time.
 Questions about this repository? My best point of contact is via [Email](mailto:jayastarrbaldwin@gmail.com)
 <br>
 If you'd like to view more of my work in GitHub, my profile is: [jayabaldwin](https://github.com/jayabaldwin)
+<br>
+Visit my repository [here](https://github.com/jayabaldwin/e-commerce-backend)
