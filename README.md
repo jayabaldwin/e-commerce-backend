@@ -28,10 +28,6 @@ In essence, this application provides a robust back end infrastructure for an e-
 
 ![Endpoint Results](./assets/endpoint-results.gif)
 
-View my full application walkthrough, inclusive of initialising the app and endpoint testing below: 
-<br>
-[Ecommerce Backend Application Walk Through](./assets/ecommerce-backend-walkthrough.mp4)
-
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
